@@ -24,7 +24,6 @@ function isValidDateFormat(dateString: string) {
            date.getDate() === day &&
            date <= today;
   }
-
   
 // **** Export default **** //
 export default {
