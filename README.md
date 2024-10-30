@@ -40,9 +40,7 @@ Run the production build (Must be built first).
 
 # Summary
 - It can be tested by using our postman on the file on the same root here with name `"happy birthday.postman_collection"`
-<br>
 - The server will run include the job to check the time to compare timezone with the receiver user localtime in which has different time with other timezone and the server timezone. And send the wishes once a year and handle in a day, cannot handle wishes with expired birthday
-<br>
 - The job will run every 15 minutes, because few zones are offset by an additionnal 30 or 45 mins
 
 ## Assumptions if want to run through docker
