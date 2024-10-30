@@ -70,7 +70,6 @@ Run the production build (Must be built first).
 `{
     "email": "bruce_wayne@mail.com"
 }`
-<br>
 
 ## Additional endpoint for frontend
 - GET /country: to get list of country in the world to facilitate the frontend fetching the list of country for user to choose
