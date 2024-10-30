@@ -65,7 +65,7 @@ Run the production build (Must be built first).
     "email": "bruce_wayne@mail.com",
     "message": ""
 }`
-**NOTE: if the message is empty, the default message will be `"Hey, {full_name} it’s your birthday”`
+- NOTE: if the message is empty, the default message will be `"Hey, {full_name} it’s your birthday”`
 <br>
 - DELETE /user: delete user with email in the request body
 `{
