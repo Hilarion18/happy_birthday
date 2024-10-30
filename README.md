@@ -73,4 +73,4 @@ Run the production build (Must be built first).
 
 ## Additional endpoint for frontend
 - GET /country: to get list of country in the world to facilitate the frontend fetching the list of country for user to choose
-- GET /timezone: to get list of timezones in the world to facilitate the frontend fetching the list of timezones for user to choose
+- GET /timezone: to get list of timezone in the world to facilitate the frontend fetching the list of timezone for user to choose
