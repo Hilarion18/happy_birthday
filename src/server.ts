@@ -74,9 +74,8 @@ app.use(express.static(staticDir));
 
 // Nav to login pg by default
 app.use('/', apiRouter);
-checkBirthdayPerSpecificTimeRange()
+checkBirthdayPerSpecificTimeRange() // This is the job that will send the message once a year at 9am at receiver local timezone
 
 
 // **** Export default **** //
-
 export default app;

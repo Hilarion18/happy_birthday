@@ -104,6 +104,32 @@ async function updateUserEmailSent(id: number) {
   }
 }
 
+async function updateUserByEmail(param: UserTypeData) {
+  try {
+    const data = {
+      first_name: param.first_name,
+      last_name: param.last_name,
+      birthday: param.birthday,
+      country: param.country,
+      timezone: param.timezone,
+      message: param.message,
+      email: param.email,
+    }
+    const updatedUser = await User.update(
+      data,
+      {
+        where: {
+          email: param.email
+        }
+      }
+    )
+    console.log("updatedUser: ", updatedUser);
+    return updatedUser
+  } catch (error) {
+    return error
+  }
+}
+
 // **** Export default **** //
 export default {
   getUser,
@@ -112,4 +138,5 @@ export default {
   getAllUserByDate,
   updateUserEmailSent,
   getAllUser,
+  updateUserByEmail,
 } as const;

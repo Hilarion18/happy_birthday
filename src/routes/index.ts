@@ -13,6 +13,7 @@ const userRouter = Router();
 // Add UserRouter
 userRouter.post(Paths.User.Create, UserRoutes.addUser);
 userRouter.delete(Paths.User.Delete, UserRoutes.deleteUser);
+userRouter.put(Paths.User.Update, UserRoutes.editUser);
 
 // **** Timezone **** //
 const timezonRouter = Router();

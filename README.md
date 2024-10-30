@@ -41,7 +41,7 @@ Run the production build (Must be built first).
 # Summary
 - It can be tested by using our postman on the file on the same root here with name `"happy birthday.postman_collection"`
 <br>
-- The server will run include the job to check the time to compare timezone with the receiver user localtime in which has different time with other timezone and the server timezone.
+- The server will run include the job to check the time to compare timezone with the receiver user localtime in which has different time with other timezone and the server timezone. And send the wishes once a year and handle in a day, cannot handle wishes with expired birthday
 <br>
 - The job will run every 15 minutes, because few zones are offset by an additionnal 30 or 45 mins
 
@@ -72,5 +72,6 @@ Run the production build (Must be built first).
 }`
 
 ## Additional endpoint for frontend
+- PUT /user: edit user with all the date
 - GET /country: to get list of country in the world to facilitate the frontend fetching the list of country for user to choose
 - GET /timezone: to get list of timezone in the world to facilitate the frontend fetching the list of timezone for user to choose

@@ -20,7 +20,8 @@ export default {
   User: {
     Base: '/user',
     Create: '/',
-    Delete: '/'
+    Delete: '/',
+    Update: '/'
   },
   Timezone: {
     Base: '/timezone',
