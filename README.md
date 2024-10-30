@@ -39,11 +39,11 @@ Run the production build (Must be built first).
 <br>
 
 # Summary
-It can be tested by using our postman on the file on the same root here with name `"happy birthday.postman_collection"`
+- It can be tested by using our postman on the file on the same root here with name `"happy birthday.postman_collection"`
 <br>
-The server will run include the job to check the time to compare timezone with the receiver user localtime in which has different time with other timezone and the server timezone.
+- The server will run include the job to check the time to compare timezone with the receiver user localtime in which has different time with other timezone and the server timezone.
 <br>
-The job will run every 15 minutes, because few zones are offset by an additionnal 30 or 45 mins
+- The job will run every 15 minutes, because few zones are offset by an additionnal 30 or 45 mins
 
 ## Assumptions if want to run through docker
 - docker and docker-compose are installed
@@ -68,12 +68,13 @@ The job will run every 15 minutes, because few zones are offset by an additionna
 <br>
 **NOTE: if the message is empty, the default message will be `"Hey, {full_name} it’s your birthday”`
 <br>
-<br>
+
 - DELETE /user: delete user with email in the request body
 `{
     "email": "bruce_wayne@mail.com"
 }`
 <br>
+
 ## Additional endpoint for frontend
 - GET /country: to get list of country in the world to facilitate the frontend fetching the list of country for user to choose
 - GET /timezone: to get list of timezones in the world to facilitate the frontend fetching the list of timezones for user to choose
