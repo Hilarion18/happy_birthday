@@ -381,6 +381,229 @@
 			]
 		},
 		{
+			"name": "update user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"bruceeeee\",\n    \"last_name\": \"wayne\",\n    \"birthday\": \"2024-10-31\",\n    \"country\": \"Indonesia\",\n    \"timezone\": \"Pacific/Apia\",\n    \"email\": \"bruce_wayne@mail.com\",\n    \"message\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"bruceeeee\",\n    \"last_name\": \"wayne\",\n    \"birthday\": \"1995-10-31\",\n    \"country\": \"Indonesia\",\n    \"timezone\": \"Australia/Canberra\",\n    \"email\": \"bruce_wayne@mail.com\",\n    \"message\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "92"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5c-MWr0YabSMQfTnLvrQMV4VahpdWc\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 30 Oct 2024 20:07:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"flag\": 200,\n    \"message\": \"success\",\n    \"result\": \"User has been successfuly updated\"\n}"
+				},
+				{
+					"name": "failed email not existed",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"bruce\",\n    \"last_name\": \"wayne\",\n    \"birthday\": \"1995-10-31\",\n    \"country\": \"Indonesia\",\n    \"timezone\": \"Australia/Canberra\",\n    \"email\": \"bruce_wayneeee@mail.com\",\n    \"message\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "61"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3d-1w+hvfAdneQYn1JN6X8LG+4SxiY\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 30 Oct 2024 20:09:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"flag\": 303,\n    \"message\": \"Email is not existed\"\n}"
+				},
+				{
+					"name": "incorrect format birthday",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"bruceeeee\",\n    \"last_name\": \"wayne\",\n    \"birthday\": \"2025-02-28\",\n    \"country\": \"Indonesia\",\n    \"timezone\": \"Australia/Canberra\",\n    \"email\": \"bruce_wayne@mail.com\",\n    \"message\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "71"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"47-MqANdG9aRwgNXjBqUICGriOB0MU\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 30 Oct 2024 20:35:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"flag\": 401,\n    \"message\": \"Birthday format is not correct\"\n}"
+				}
+			]
+		},
+		{
 			"name": "delete user",
 			"request": {
 				"method": "DELETE",
