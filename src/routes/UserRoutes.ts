@@ -23,8 +23,6 @@ async function addUser(req: IReq, res: IRes) {
     const timezone = reqBody.timezone
     const email = reqBody.email
     reqBody.message = reqBody.message ? reqBody.message : `Hey, ${first_name} ${last_name} it’s your birthday`
-    console.log("reqBody: ", reqBody);
-    
     if ( lodash.isEmpty(first_name) || lodash.isEmpty(last_name) || lodash.isEmpty(birthday) || lodash.isEmpty(country) || lodash.isEmpty(timezone) || lodash.isEmpty(email) ) {
       return response.error("All data must be filled", res, 401)
     }
